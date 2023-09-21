@@ -8,8 +8,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/aresa7796/langchaingo/tools/sqldatabase"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/tools/sqldatabase"
 )
 
 func Test(t *testing.T) {

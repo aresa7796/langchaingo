@@ -4,8 +4,9 @@ import (
 	"errors"
 	"log"
 	"strings"
+	"unicode/utf8"
 
-	"github.com/tmc/langchaingo/schema"
+	"github.com/aresa7796/langchaingo/schema"
 )
 
 // ErrMismatchMetadatasAndText is returned when the number of texts and metadatas
@@ -74,9 +75,9 @@ func mergeSplits(splits []string, separator string, chunkSize int, chunkOverlap 
 	total := 0
 
 	for _, split := range splits {
-		totalWithSplit := total + len(split)
+		totalWithSplit := total + utf8.RuneCountInString(split)
 		if len(currentDoc) != 0 {
-			totalWithSplit += len(separator)
+			totalWithSplit += utf8.RuneCountInString(separator)
 		}
 
 		maybePrintWarning(total, chunkSize)
@@ -86,19 +87,19 @@ func mergeSplits(splits []string, separator string, chunkSize int, chunkOverlap 
 				docs = append(docs, doc)
 			}
 
-			for shouldPop(chunkOverlap, chunkSize, total, len(split), len(separator), len(currentDoc)) {
-				total -= len(currentDoc[0]) //nolint:gosec
+			for shouldPop(chunkOverlap, chunkSize, total, utf8.RuneCountInString(split), utf8.RuneCountInString(separator), len(currentDoc)) {
+				total -= utf8.RuneCountInString(currentDoc[0]) //nolint:gosec
 				if len(currentDoc) > 1 {
-					total -= len(separator)
+					total -= utf8.RuneCountInString(separator)
 				}
 				currentDoc = currentDoc[1:] //nolint:gosec
 			}
 		}
 
 		currentDoc = append(currentDoc, split)
-		total += len(split)
+		total += utf8.RuneCountInString(split)
 		if len(currentDoc) > 1 {
-			total += len(separator)
+			total += utf8.RuneCountInString(separator)
 		}
 	}
 

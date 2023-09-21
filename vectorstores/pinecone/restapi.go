@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"net/url"
 
+	"github.com/aresa7796/langchaingo/schema"
 	"github.com/google/uuid"
-	"github.com/tmc/langchaingo/schema"
 )
 
 // APIError is an error type returned if the status code from the rest

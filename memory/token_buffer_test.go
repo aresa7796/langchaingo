@@ -5,10 +5,10 @@ import (
 	"os"
 	"testing"
 
+	"github.com/aresa7796/langchaingo/llms/openai"
+	"github.com/aresa7796/langchaingo/schema"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/llms/openai"
-	"github.com/tmc/langchaingo/schema"
 )
 
 func TestTokenBufferMemory(t *testing.T) {

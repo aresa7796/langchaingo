@@ -1,7 +1,7 @@
 # 🦜️🔗 LangChain Go
 
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/tmc/langchaingo)
-[![scorecard](https://goreportcard.com/badge/github.com/tmc/langchaingo)](https://goreportcard.com/report/github.com/tmc/langchaingo)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=flat-square)](https://pkg.go.dev/github.com/aresa7796/langchaingo)
+[![scorecard](https://goreportcard.com/badge/github.com/aresa7796/langchaingo)](https://goreportcard.com/report/github.com/aresa7796/langchaingo)
 
 ⚡ Building applications with LLMs through composability ⚡
 
@@ -11,7 +11,7 @@ This is the Go language implementation of LangChain.
 
 ## 📖 Documentation
 
-- [API Reference](https://pkg.go.dev/github.com/tmc/langchaingo)
+- [API Reference](https://pkg.go.dev/github.com/aresa7796/langchaingo)
 
 ## 🎉 Examples
 
@@ -24,7 +24,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/tmc/langchaingo/llms/openai"
+	"github.com/aresa7796/langchaingo/llms/openai"
 )
 
 func main() {

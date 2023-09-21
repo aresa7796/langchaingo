@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/aresa7796/langchaingo/llms/vertexai"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/llms/vertexai"
 )
 
 func TestVertexAIPaLMEmbeddings(t *testing.T) {

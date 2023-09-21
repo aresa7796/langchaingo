@@ -72,12 +72,12 @@ func (c *Client) setCompletionDefaults(payload *CompletionRequest) {
 // nolint:lll
 func (c *Client) createCompletion(ctx context.Context, payload *CompletionRequest) (*ChatResponse, error) {
 	c.setCompletionDefaults(payload)
-	return c.createChat(ctx, &ChatRequest{
+	cr := &ChatRequest{
 		Model: payload.Model,
 		Messages: []*ChatMessage{
 			{Role: "user", Content: payload.Prompt},
 		},
-		Temperature:      payload.Temperature,
+		Temperature:      0.0,
 		TopP:             payload.TopP,
 		MaxTokens:        payload.MaxTokens,
 		N:                payload.N,
@@ -85,5 +85,6 @@ func (c *Client) createCompletion(ctx context.Context, payload *CompletionReques
 		FrequencyPenalty: payload.FrequencyPenalty,
 		PresencePenalty:  payload.PresencePenalty,
 		StreamingFunc:    payload.StreamingFunc,
-	})
+	}
+	return c.createChat(ctx, cr)
 }

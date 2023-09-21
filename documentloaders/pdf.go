@@ -4,9 +4,9 @@ import (
 	"context"
 	"io"
 
+	"github.com/aresa7796/langchaingo/schema"
+	"github.com/aresa7796/langchaingo/textsplitter"
 	"github.com/ledongthuc/pdf"
-	"github.com/tmc/langchaingo/schema"
-	"github.com/tmc/langchaingo/textsplitter"
 )
 
 // PDF loads text data from an io.Reader.

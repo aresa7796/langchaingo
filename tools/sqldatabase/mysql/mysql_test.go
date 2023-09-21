@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/aresa7796/langchaingo/tools/sqldatabase"
+	_ "github.com/aresa7796/langchaingo/tools/sqldatabase/mysql"
 	"github.com/stretchr/testify/require"
-	"github.com/tmc/langchaingo/tools/sqldatabase"
-	_ "github.com/tmc/langchaingo/tools/sqldatabase/mysql"
 )
 
 func Test(t *testing.T) {

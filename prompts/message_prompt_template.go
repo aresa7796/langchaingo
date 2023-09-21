@@ -1,6 +1,6 @@
 package prompts
 
-import "github.com/tmc/langchaingo/schema"
+import "github.com/aresa7796/langchaingo/schema"
 
 // SystemMessagePromptTemplate is a message formatter that returns a system message.
 type SystemMessagePromptTemplate struct {

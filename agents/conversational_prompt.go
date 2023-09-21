@@ -4,8 +4,8 @@ package agents
 import (
 	"strings"
 
-	"github.com/tmc/langchaingo/prompts"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/aresa7796/langchaingo/prompts"
+	"github.com/aresa7796/langchaingo/tools"
 )
 
 const _defaultConversationalPrefix = `Assistant is a large language model trained by Meta.

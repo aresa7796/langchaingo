@@ -1,4 +1,4 @@
-module github.com/tmc/langchaingo
+module github.com/aresa7796/langchaingo
 
 go 1.20
 
@@ -78,6 +78,7 @@ require (
 	cloud.google.com/go/aiplatform v1.42.0
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/PuerkitoBio/goquery v1.8.1
+	github.com/aresa7796/sentences v0.0.2
 	github.com/cohere-ai/tokenizer v1.1.2
 	github.com/go-openapi/strfmt v0.21.3
 	github.com/go-sql-driver/mysql v1.7.1

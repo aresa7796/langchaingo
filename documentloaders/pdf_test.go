@@ -5,9 +5,9 @@ import (
 	"os"
 	"testing"
 
+	"github.com/aresa7796/langchaingo/textsplitter"
 	"github.com/ledongthuc/pdf"
 	"github.com/stretchr/testify/assert"
-	"github.com/tmc/langchaingo/textsplitter"
 )
 
 func TestPDFLoader(t *testing.T) {

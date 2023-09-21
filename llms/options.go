@@ -10,9 +10,9 @@ type CallOptions struct {
 	// Model is the model to use.
 	Model string `json:"model"`
 	// MaxTokens is the maximum number of tokens to generate.
-	MaxTokens int `json:"max_tokens"`
+	MaxTokens int `json:"max_tokens,omitempty"`
 	// Temperature is the temperature for sampling, between 0 and 1.
-	Temperature float64 `json:"temperature"`
+	Temperature float64 `json:"temperature,omitempty"`
 	// StopWords is a list of words to stop on.
 	StopWords []string `json:"stop_words"`
 	// StreamingFunc is a function to be called for each chunk of a streaming response.

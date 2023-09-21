@@ -8,10 +8,10 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/llms"
-	"github.com/tmc/langchaingo/llms/local/internal/localclient"
-	"github.com/tmc/langchaingo/schema"
+	"github.com/aresa7796/langchaingo/callbacks"
+	"github.com/aresa7796/langchaingo/llms"
+	"github.com/aresa7796/langchaingo/llms/local/internal/localclient"
+	"github.com/aresa7796/langchaingo/schema"
 )
 
 var (

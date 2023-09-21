@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/aresa7796/langchaingo/tools"
 	"github.com/gocolly/colly"
-	"github.com/tmc/langchaingo/tools"
 )
 
 const (

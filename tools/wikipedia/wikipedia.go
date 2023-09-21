@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tmc/langchaingo/callbacks"
-	"github.com/tmc/langchaingo/tools"
+	"github.com/aresa7796/langchaingo/callbacks"
+	"github.com/aresa7796/langchaingo/tools"
 )
 
 const (

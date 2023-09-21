@@ -85,6 +85,9 @@ func (c *Client) CreateCompletion(ctx context.Context, r *CompletionRequest) (*C
 	if len(resp.Choices) == 0 {
 		return nil, ErrEmptyResponse
 	}
+
+	//fmt.Printf("req===>:%s\n\n", r.Prompt)
+	//fmt.Printf("resp===>:%s\n\n", resp.Choices[0].Message.Content)
 	return &Completion{
 		Text: resp.Choices[0].Message.Content,
 	}, nil
