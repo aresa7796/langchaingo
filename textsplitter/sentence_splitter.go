@@ -81,7 +81,7 @@ func (s *SentenceSplitter) split(text string, chunkSize int) []Split {
 
 	var splits []string
 	for _, splitFn := range []func(string) []string{
-		s.SplitBySep(s.ParagraphSeparator, true),
+		s.SplitBySep(s.ParagraphSeparator, false),
 		s.ChunkingTokenizerFn(),
 	} {
 		splits = splitFn(text)
@@ -96,7 +96,7 @@ func (s *SentenceSplitter) split(text string, chunkSize int) []Split {
 	} else {
 		for _, splitFn := range []func(string) []string{
 			s.SplitByRegex(s.SecondaryChunkingRegex),
-			s.SplitBySep(s.Separator, true),
+			s.SplitBySep(s.Separator, false),
 			s.SplitByChar(),
 		} {
 			splits = splitFn(text)
